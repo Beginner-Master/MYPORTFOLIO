@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/31c05e2526.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- ---------------LANDING PAGE----------------------------------------------->
+    <section id="header">
+        <div class="container">
+            <nav>
+                <h1>Ar<span>un.</span></h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>SECOND YEAR STUDENT</p>
+                <h1>HI, I'm <span>Arun Pratap Singh</span><br> From Sharda University</h1>
+            </div>
+        </div>
+    </section>
+<!-------------------------ABOUT SECTION----------------------------------------------->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/mypic.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Arun Pratap Singh A second-year btech student. Pursuing btech in computer science and engineering from Sharda University. I am deeply passionate about software development Currently, I am immersed in the world of web development. I have knowledge of C,  Java. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>C, Java</li>
+                            <li><span>Web Deveplopment</span><br>HTML, CSS, JavaScript</li>
+                            
+                        </ul>
+                    </div>
+
+                    
+
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2020</span><br>Passed 10th from ST COLUMBUS SCHOOL</li>
+                            <li><span>2022</span><br>Passed 12th from ST COLUMBUS SCHOOL</li>
+                            <li><span>2023</span><br>PASSED 1st year from SHARDA UNIVERSITY</li>
+                        </ul>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- -------------SERVICES SECTION-------------------------------------------->
+    <section id="services">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Fingerprint Door Lock</h2>
+                    <p>This project was done with help of Arduino and Transformer ,together with different components results in
+                        FingerPrint Door Lock.
+                        </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square "></i></a>
+                </div> 
+
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>VBlogger</h2>
+                    <p>Website created with help of HTML and Css which allow user to enter Blogs.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </section>    
+<!-- -------------CONTACT SECTION------------------------------------------->
+    <section id="contact">
+       <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title ">Contact <span>Me</span></h1>
+                <p><i class="fa-regular fa-envelope"></i>  apsyadav31@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 1234567890</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/arunyadavv51?igsh=MTJ3NWZwNjY4MG0zNg=="><i class="fa-brands fa-instagram"></i></a>
+                    
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+               <button class="button-87" role="button">Submit</button>
+            </form>
+        </div>
+        </div>
+       </div>
+       <div class="copyright">
+        <p>copyright  ©  Arun.  My  Portfolio  Website  2024</p>
+       </div>
+
+    </section>
+ 
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname){
+               for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+               }
+               for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+               }
+               event.currentTarget.classList.add("active-link");
+               document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
